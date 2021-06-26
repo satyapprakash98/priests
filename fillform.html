@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div class="today">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="date">Select a Date :</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group form-check">
+            <label for="time">Select a time:</label>
+            <input type="time" id="time" name="time">
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="somefunc()">Submit</button>
+        </div>
+    </form>   
+    <a href="index.html" class="how">Back to home site</a> 
+</body>
+<script type="text/javascript">
+    function somefunc(){
+        var date = document.getElementById("date").value;
+        var time = document.getElementById("time").value;
+        console.log(date);
+        console.log(date);
+        alert("Your appointment with priest has been booked at date "+date+" and at time "+ time);
+        var ask = window.confirm("You shall be redirected back to the site");
+        if (ask) {
+            window.location.href = "index.html";
+        }
+        console.log(ask)
+    }
+</script>
+</html>
